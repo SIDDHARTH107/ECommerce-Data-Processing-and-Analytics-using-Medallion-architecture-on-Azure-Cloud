@@ -8,10 +8,6 @@
     "file_name": "olist_order_items_dataset.csv"
   },
   {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_payments_dataset.csv",
-    "file_name": "olist_order_payments_dataset.csv"
-  },
-  {
     "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_reviews_dataset.csv",
     "file_name": "olist_order_reviews_dataset.csv"
   },
