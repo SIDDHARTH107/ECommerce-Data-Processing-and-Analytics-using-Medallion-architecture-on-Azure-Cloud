@@ -1,26 +1,26 @@
 [
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_customers_dataset.csv",
-    "file_name": "olist_customers_dataset.csv"
-  },
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_items_dataset.csv",
-    "file_name": "olist_order_items_dataset.csv"
-  },
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_reviews_dataset.csv",
-    "file_name": "olist_order_reviews_dataset.csv"
-  },
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_orders_dataset.csv",
-    "file_name": "olist_orders_dataset.csv"
-  },
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_products_dataset.csv",
-    "file_name": "olist_products_dataset.csv"
-  },
-  {
-    "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_sellers_dataset.csv",
-    "file_name": "olist_sellers_dataset.csv"
-  }
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_customers_dataset.csv",
+        "file_name": "olist_customers_dataset.csv"
+    },
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_items_dataset.csv",
+        "file_name": "olist_order_items_dataset.csv"
+    },
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_order_reviews_dataset.csv",
+        "file_name": "olist_order_reviews_dataset.csv"
+    },
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_orders_dataset.csv",
+        "file_name": "olist_orders_dataset.csv"
+    },
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_products_dataset.csv",
+        "file_name": "olist_products_dataset.csv"
+    },
+    {
+        "csv_relative_url": "Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/refs/heads/main/olist_sellers_dataset.csv",
+        "file_name": "olist_sellers_dataset.csv"
+    }
 ]
