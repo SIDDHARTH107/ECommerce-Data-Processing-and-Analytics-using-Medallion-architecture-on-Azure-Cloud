@@ -10,3 +10,7 @@
 
 **Microsoft Azure** gives us 2 modes: Pay as you go and trying for free. But, if we are choosing free, it will give us the free $200 credits to use it for 1 month. 
 <img width="1890" height="730" alt="image" src="https://github.com/user-attachments/assets/9574d94b-e921-45da-a467-3e3adedb0f19" />
+
+# Challenges Faced
+1. Built a separate pipeline for olist_geolocation from PostgreSQL to Azure bronze layer (ADLS Gen2) because of the timeout issue due to the large volume of data (around 10 lakhs records).
+2. Used Self Hosted Integrated Runtime (SHIR), which acts as a gateway from the Local PostgreSQL server to the Azure cloud, as local to cloud is not possible without any gateway.
