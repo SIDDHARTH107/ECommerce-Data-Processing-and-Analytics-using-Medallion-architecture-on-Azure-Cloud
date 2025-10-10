@@ -14,3 +14,6 @@
 # Challenges Faced
 1. Built a separate pipeline for olist_geolocation from PostgreSQL to Azure bronze layer (ADLS Gen2) because of the timeout issue due to the large volume of data (around 10 lakhs records).
 2. Used Self Hosted Integrated Runtime (SHIR), which acts as a gateway from the Local PostgreSQL server to the Azure cloud, as local to cloud is not possible without any gateway.
+3. 
+
+Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
