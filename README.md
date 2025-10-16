@@ -20,7 +20,7 @@
 <img width="839" height="376" alt="image" src="https://github.com/user-attachments/assets/bb8595c4-ed56-401a-b750-331bfe4e25d4" />
 
 What This Error Means
-The error "You do not have access" with Error code: 401 means "Unauthorized." It's a permissions issue. I was successfully logged into Azure, but my specific account (mohepatra.si@northeastern.edu) does not have the administrative rights to view or manage the "App registrations" section.
+The error "You do not have access" with Error code: 401 means "Unauthorized." It's a permissions issue. I was successfully logged into Azure, but my specific account (mohapatra.si@northeastern.edu) does not have the administrative rights to view or manage the "App registrations" section.
 
 Why I didn’t Have Access (The University Analogy)
 Think of your university's entire Microsoft Azure setup as a large office building.
