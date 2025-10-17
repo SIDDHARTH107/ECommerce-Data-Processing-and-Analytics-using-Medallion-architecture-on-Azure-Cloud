@@ -37,6 +37,20 @@ There is another, simpler method that is perfect for this situation and still ke
 
 Instead of creating a new "robot user," you will temporarily use your own powerful key (the Storage Account Access Key) to establish a permanent link (a mount point) between Databricks and your Data Lake.
 
+What I did here?
+Think of it like giving your workshop (Databricks) a secure key to your storage unit (ADLS).
+
+We got the Master Key: I went to my Azure storage account and copied its Access Key (key1). This key is like a master password that grants full access to all the data inside the service.
+
+We Used a Secure Lockbox: Instead of pasting this sensitive key directly into your code (which is insecure), we created a Databricks Widget outside of the cell. This widget is like a secure lockbox at the top of my notebook. I pasted the key into this box, keeping it separate from my saved code.
+
+We Built a Secure Bridge: Finally, I ran the dbutils.fs.mount() command. This command did two things:
+
+It securely took the key from the lockbox.
+It used the key to build a permanent, direct link—a mount point—from Databricks to my storage container.
+
+The result is that my olistdata container now appears as a simple folder inside Databricks at the path /mnt/olistdata. Anyone can now read and write files to our storage as if it were a local directory.
+
 
 
 Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
