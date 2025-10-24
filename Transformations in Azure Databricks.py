@@ -115,9 +115,9 @@ import pandas as pd
 
 # 2. Setting up my connection string
 # IMPORTANT: Replacing <username>, <password>, and the cluster URL with your actual credentials from MongoDB Atlas.
-username = "databricks_user"
-password = "AK1wwQ0NVi8OdYbq"
-cluster_url = "cluster0.1o5zju7.mongodb.net" # Atlas connection string
+username = "abc"
+password = "abc"
+cluster_url = "cluster0.abcxyz.mongodb.net" # Atlas connection string
 
 # COMMAND ----------
 
