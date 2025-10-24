@@ -51,6 +51,23 @@ It used the key to build a permanent, direct link—a mount point—from Databri
 
 The result is that my olistdata container now appears as a simple folder inside Databricks at the path /mnt/olistdata. Anyone can now read and write files to our storage as if it were a local directory.
 
+5. Why do Synapse deployments fail?
+
+Think of a Synapse workspace like opening a new mall. We’re not just creating the mall—we also need parking (SQL server), security (managed identity/permissions), roads (networking), and a storage warehouse (Data Lake). If any of those can’t be created in the location you selected, the entire “open the mall” action fails.
+
+One reason for this can be:
+
+Region blocks / capacity limits (my exact error)
+
+Message: SqlServerRegionDoesNotAllowProvisioning … Location 'eastus' is not accepting creation of new … SQL Database servers…
+
+What it means: In that region (e.g., East US), my subscription isn’t allowed to create new Azure SQL Server resources right now—often due to capacity or subscription-type limits (e.g., Free Trial/Azure for Students).
+
+Real example: We pick East US for Synapse, but Synapse needs to spin up a SQL server there; the region says “no new SQL servers allowed,” so deployment fails.
+
+Instead we can pick another region (e.g., East US 2, Central US, West US 2) to solve this, which is what happened in my case.
+
+
 
 
 Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
