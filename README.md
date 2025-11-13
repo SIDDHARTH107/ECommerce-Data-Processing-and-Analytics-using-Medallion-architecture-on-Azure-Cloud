@@ -71,3 +71,7 @@ Instead we can pick another region (e.g., East US 2, Central US, West US 2) to s
 
 
 Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+## POWER BI DASHBOARD
+<img width="838" height="476" alt="image" src="https://github.com/user-attachments/assets/2f662506-ff05-4e9b-8c56-1c534773122c" />
+
