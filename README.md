@@ -35,7 +35,7 @@
 ## Business Insights from Gold Layer table
 <img width="859" height="326" alt="image" src="https://github.com/user-attachments/assets/ff9e7819-252b-4e44-af79-c72199816df8" />
 
-## Connect
-[https://www.linkedin.com/in/siddharthmohapatra-dataanalyst/](LinkedIn)
-[https://x.com/SidDS2000](Twitter)
-
+## 🔗 Connect
+- 💼 [LinkedIn](https://www.linkedin.com/in/siddharthmohapatra-dataanalyst/)
+- 🐦 [Twitter](https://x.com/SidDS2000)
+- 📧 [Email](siddharth.m33@gmail.com)
