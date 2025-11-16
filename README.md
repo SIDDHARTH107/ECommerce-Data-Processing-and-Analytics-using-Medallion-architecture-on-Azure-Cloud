@@ -53,9 +53,6 @@ The Medallion Architecture is a multi-layered data design used in modern data en
 
 <img width="1355" height="727" alt="image" src="https://github.com/user-attachments/assets/73f99e14-da68-4a71-8c3c-6c1d78c74c90" />
 
-**Microsoft Azure** gives us 2 modes: Pay as you go and trying for free. But, if we are choosing free, it will give us the free $200 credits to use it for 1 month. 
-<img width="1890" height="730" alt="image" src="https://github.com/user-attachments/assets/9574d94b-e921-45da-a467-3e3adedb0f19" />
-
 ## 🚀 Tech Stack
 - **Data Ingestion**: Azure Data Factory
 - **Storage**: Azure Data Lake Storage Gen2
