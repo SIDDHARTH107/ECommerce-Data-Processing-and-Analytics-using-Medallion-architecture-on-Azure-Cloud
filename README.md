@@ -1,6 +1,6 @@
 # Real Time ECommerce Data Processing & Analytics using Medallion Architecture on Azure Cloud
 
-## Architecture
+## Project overview
 This project follows a modern **Medallion Architecture (Bronze → Silver → Gold)** built on Azure cloud to enable scalable, real-time e-commerce data processing and analytics.
 
 🔹 **Data Ingestion (Bronze Layer)**
