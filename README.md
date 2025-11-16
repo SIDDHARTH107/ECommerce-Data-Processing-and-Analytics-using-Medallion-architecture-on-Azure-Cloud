@@ -1,6 +1,21 @@
 # Real Time ECommerce Data Processing & Analytics using Medallion Architecture on Azure Cloud
 
 ## Architecture
+This project follows a modern **Medallion Architecture (Bronze → Silver → Gold)** built on Azure cloud to enable scalable, real-time e-commerce data processing and analytics.
+
+🔹 **Data Ingestion (Bronze Layer)**
+Multiple data sources (GitHub HTTP endpoints and SQL tables) are ingested using Azure Data Factory and stored as raw files in Azure Data Lake Storage Gen2.
+
+🔹 **Data Transformation (Silver Layer)**
+Raw data is cleaned, modeled, and enriched in Azure Databricks using PySpark.
+Additional enrichment tables are fetched from MongoDB and merged with processed datasets.
+
+🔹 **Data Storage & Serving (Gold Layer)**
+The transformed and curated Gold datasets are stored back into ADLS Gen2, optimized in Parquet format for analytics workloads.
+
+🔹 **Analytics & Visualization**
+Azure Synapse Serverless SQL reads directly from ADLS to enable fast querying without needing provisioning. Finally, Power BI is used to build interactive dashboards for revenue analysis, customer insights, and operational KPIs.
+
 <img width="1219" height="693" alt="image" src="https://github.com/user-attachments/assets/2b3540df-6098-42b0-8d68-65d9795aaf54" />
 
 ## Medallion Architecture
