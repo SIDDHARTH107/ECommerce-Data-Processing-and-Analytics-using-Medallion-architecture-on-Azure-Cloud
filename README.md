@@ -19,6 +19,36 @@ Azure Synapse Serverless SQL reads directly from ADLS to enable fast querying wi
 <img width="1219" height="693" alt="image" src="https://github.com/user-attachments/assets/2b3540df-6098-42b0-8d68-65d9795aaf54" />
 
 ## Medallion Architecture
+The Medallion Architecture is a multi-layered data design used in modern data engineering to organize data as it flows from raw ingestion to refined, business-ready datasets. It improves data quality, reliability, and scalability across analytics platforms such as Databricks and Azure.
+
+🥉 **Bronze Layer – Raw Data (Landing Zone)**
+
+- Stores raw, unprocessed data exactly as received from various sources (APIs, databases, streams).
+- Schema is not enforced — data is stored in its original form.
+- Purpose: Ingest quickly, keep full data fidelity, enable replay if needed.
+👉 Think of it as a digital warehouse where all incoming items are dropped off without sorting.
+
+🥈 **Silver Layer – Cleaned & Curated Data**
+
+- Data is cleaned, filtered, deduplicated, and the schema is standardized.
+- Ensures data is quality-checked and consistent.
+- Combines data from multiple Bronze tables if needed.
+👉 Like a processing center where items are inspected, cleaned, and organized into proper categories.
+
+🥇 **Gold Layer – Business-Level, Analytics-Ready Data**
+
+- Data is modeled for analytics, often aggregated by business needs.
+- Used for dashboards, ML models, KPIs, and reporting.
+- Optimized for fast queries and consumption by tools like Power BI.
+👉 This is the final store display — polished, arranged, and ready for customers (business users).
+
+🔍 **Why to use Medallion Architecture?**
+
+- Ensures clean, reliable, and traceable data.
+- Enables scalable ETL pipelines.
+- Supports multiple consumers (BI, ML, reports).
+- Simplifies debugging — each step is separated and transparent.
+
 ![Alt text](https://github.com/SIDDHARTH107/Real-Time-E-Commerce-Data-Processing-and-Analytics-using-Medallion-architecture-on-Azure-Cloud/blob/main/1719345910378.gif?raw=true)
 
 <img width="1355" height="727" alt="image" src="https://github.com/user-attachments/assets/73f99e14-da68-4a71-8c3c-6c1d78c74c90" />
