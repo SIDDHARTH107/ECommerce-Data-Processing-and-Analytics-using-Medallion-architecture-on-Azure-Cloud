@@ -68,8 +68,6 @@ Real example: We pick East US for Synapse, but Synapse needs to spin up a SQL se
 Instead we can pick another region (e.g., East US 2, Central US, West US 2) to solve this, which is what happened in my case.
 
 
-
-
 Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ## POWER BI DASHBOARD
