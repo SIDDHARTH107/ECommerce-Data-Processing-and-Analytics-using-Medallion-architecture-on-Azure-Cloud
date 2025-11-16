@@ -11,65 +11,6 @@
 **Microsoft Azure** gives us 2 modes: Pay as you go and trying for free. But, if we are choosing free, it will give us the free $200 credits to use it for 1 month. 
 <img width="1890" height="730" alt="image" src="https://github.com/user-attachments/assets/9574d94b-e921-45da-a467-3e3adedb0f19" />
 
-# Challenges Faced
-1. Built a separate pipeline for olist_geolocation from PostgreSQL to Azure bronze layer (ADLS Gen2) because of the timeout issue due to the large volume of data (around 10 lakhs records).
-2. Used Self Hosted Integrated Runtime (SHIR), which acts as a gateway from the Local PostgreSQL server to the Azure cloud, as local to cloud is not possible without any gateway.
-3. Used the Publish All button for permanent save otherwise I would have taken around 2-3 weeks more to start building the pipeline from scratch, which took me a lot of time.
-4. To make the connection, we need some key or permission here to maintain the equality. I mean, both are Microsoft Azure services, so they are connected within Microsoft, and no third party can access them. So, here in this case when I tried to connect Azure Databricks and ADLS, I got this error:
-
-<img width="839" height="376" alt="image" src="https://github.com/user-attachments/assets/bb8595c4-ed56-401a-b750-331bfe4e25d4" />
-
-What This Error Means
-The error "You do not have access" with Error code: 401 means "Unauthorized." It's a permissions issue. I was successfully logged into Azure, but my specific account (mohapatra.si@northeastern.edu) does not have the administrative rights to view or manage the "App registrations" section.
-
-Why I didn’t Have Access (The University Analogy)
-Think of your university's entire Microsoft Azure setup as a large office building.
-
-The Building (Azure Active Directory/Tenant): The entire building is managed by your university's IT administrators. They control the main entrance, the security office, and who gets what keys. The "App registrations" page is like the building's main security office. It's a central, high-level area.
-
-Your Office (Your Azure for Students Subscription): The university has given you your own private office inside the building—this is your "Azure for Students" subscription. Inside your office, you are the owner. You can set up furniture (like Azure Data Factory, Databricks, etc.) and do whatever you want.
-
-The error we are seeing is because our keycard (our student account) lets us into our own office, but it doesn't grant us access to the main security office for the entire building. This is a security measure to prevent students from viewing or changing administrative settings that affect the whole university.
-
-However, the tutorial I was following demonstrated the most common and robust method for production environments: creating a Service Principal. A Service Principal is like creating a robot user with its own specific permissions. However, as you discovered, creating these "robot users" requires high-level administrative access to the "security office" (App Registrations), which I don't have with a student account.
-
-There is another, simpler method that is perfect for this situation and still keeps the connection secure within the Microsoft cloud. I will use a method called mounting with an Account Key.
-
-Instead of creating a new "robot user," you will temporarily use your own powerful key (the Storage Account Access Key) to establish a permanent link (a mount point) between Databricks and your Data Lake.
-
-What I did here?
-Think of it like giving your workshop (Databricks) a secure key to your storage unit (ADLS).
-
-We got the Master Key: I went to my Azure storage account and copied its Access Key (key1). This key is like a master password that grants full access to all the data inside the service.
-
-We Used a Secure Lockbox: Instead of pasting this sensitive key directly into your code (which is insecure), we created a Databricks Widget outside of the cell. This widget is like a secure lockbox at the top of my notebook. I pasted the key into this box, keeping it separate from my saved code.
-
-We Built a Secure Bridge: Finally, I ran the dbutils.fs.mount() command. This command did two things:
-
-It securely took the key from the lockbox.
-It used the key to build a permanent, direct link—a mount point—from Databricks to my storage container.
-
-The result is that my olistdata container now appears as a simple folder inside Databricks at the path /mnt/olistdata. Anyone can now read and write files to our storage as if it were a local directory.
-
-5. Why do Synapse deployments fail?
-
-Think of a Synapse workspace like opening a new mall. We’re not just creating the mall—we also need parking (SQL server), security (managed identity/permissions), roads (networking), and a storage warehouse (Data Lake). If any of those can’t be created in the location you selected, the entire “open the mall” action fails.
-
-One reason for this can be:
-
-Region blocks / capacity limits (my exact error)
-
-Message: SqlServerRegionDoesNotAllowProvisioning … Location 'eastus' is not accepting creation of new … SQL Database servers…
-
-What it means: In that region (e.g., East US), my subscription isn’t allowed to create new Azure SQL Server resources right now—often due to capacity or subscription-type limits (e.g., Free Trial/Azure for Students).
-
-Real example: We pick East US for Synapse, but Synapse needs to spin up a SQL server there; the region says “no new SQL servers allowed,” so deployment fails.
-
-Instead we can pick another region (e.g., East US 2, Central US, West US 2) to solve this, which is what happened in my case.
-
-
-Dataset Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-
 ## POWER BI DASHBOARD
 <img width="838" height="476" alt="image" src="https://github.com/user-attachments/assets/2f662506-ff05-4e9b-8c56-1c534773122c" />
 
